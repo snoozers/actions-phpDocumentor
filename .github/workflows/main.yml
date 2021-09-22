@@ -15,7 +15,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - run: |
-          pwd
-          ls -la
-          phpdoc/phpdoc -h
-          phpdoc/phpdoc run -d /data/src/tests -t /data/docs/tests
+          git branch
+          git checkout develop
+          docker run --rm -v $(pwd):/data phpdoc/phpdoc run -d /data/src/tests -t /data/docs/tests
