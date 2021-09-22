@@ -17,11 +17,11 @@ class ExampleTest extends TestCase
     /**
      * 概要
      *
-     * 説明でうすすす
+     * 説明でうすすすddd
      *
      * @return void
      */
-    public function テストメソッド1()
+    public function テストメソッド1a()
     {
         $this->assertTrue(true);
     }
