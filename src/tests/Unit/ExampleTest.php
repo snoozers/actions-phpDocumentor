@@ -13,4 +13,28 @@ class ExampleTest extends TestCase
     {
         $this->assertTrue(true);
     }
+
+    /**
+     * 概要
+     *
+     * 説明でうすすすs
+     *
+     * @return void
+     */
+    public function テストメソッド()
+    {
+        $this->assertTrue(true);
+    }
+
+    /**
+     * 概要
+     *
+     * 説明でうすすすs
+     *
+     * @return void
+     */
+    public function テストメソッド()
+    {
+        $this->assertTrue(true);
+    }
 }
