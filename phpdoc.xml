@@ -14,7 +14,7 @@
         <api>
             <source dsn="./src/tests" />
             <ignore hidden="true" symlinks="true">
-                <path>features/**/*</path>
+                <path>Feature/**/*</path>
             </ignore>
         </api>
     </version>
