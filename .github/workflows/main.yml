@@ -26,7 +26,7 @@ jobs:
           git config --local user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git config --local user.name "${GITHUB_ACTOR}"
       - name: Generate
-        run: phpdoc run
+        run: phpdoc run --config ./phpdoc.xml
       - name: Commit
         run: |
             git add .

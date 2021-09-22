@@ -15,5 +15,5 @@
             <source dsn="./src/tests" />
         </api>
     </version>
-    <template name="responsive-twig" />
+    <template name="default" />
 </phpdocumentor>
