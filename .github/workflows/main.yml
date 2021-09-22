@@ -6,6 +6,9 @@ on: [push]
   #     - develop
   #   types: [closed]
 
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 jobs:
   generate-test-documents:
     runs-on: ubuntu-18.04
@@ -18,9 +21,11 @@ jobs:
         with:
           ref: develop
       - name: Git Settings
+          # git remote set-url origin https://github-actions:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
         run: |
-          git config --local user.email "test@example.com"
-          git config --local user.name "test_user"
+          echo "${GITHUB_TOKEN}"
+          git config --local user.email "${GITHUB_ACTOR}"
+          git config --local user.name "${GITHUB_ACTOR}@users.noreply.github.com"
       - name: Generate Documents
         run: phpdoc run -d ./src/tests -t ./docs/tests
       - name: Commit
