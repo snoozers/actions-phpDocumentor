@@ -27,3 +27,5 @@ jobs:
         run: |
             git add .
             git commit -m 'docs: テスト仕様書生成'
+            git pull
+            git push origin develop
