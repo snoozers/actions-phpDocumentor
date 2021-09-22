@@ -1,10 +1,12 @@
 name: Generate Test Documents
 
-on: [push]
-  # pull_request:
-  #   branches:
-  #     - develop
-  #   types: [closed]
+on:
+  pull_request:
+    branches:
+      - develop
+    paths:
+      - "src/tests/**"
+    types: [closed]
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -14,7 +16,7 @@ jobs:
     runs-on: ubuntu-18.04
     container:
       image: phpdoc/phpdoc
-    # if: github.event.pull_request.merged == true
+    if: github.event.pull_request.merged == true
     steps:
       - name: Checkout
         uses: actions/checkout@v1
