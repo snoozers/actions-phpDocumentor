@@ -1,6 +1,9 @@
 name: Generate Test Documents
 
-on: [push]
+on:
+  push:
+    branches:
+      - develop
   # pull_request:
   #   branches:
   #     - develop
