@@ -131996,7 +131996,7 @@ class ExampleTest extends TestCase
     /**
      * 概要
      *
-     * 説明でうすすすs
+     * 説明でうすすすss
      *
      * @return void
      */
