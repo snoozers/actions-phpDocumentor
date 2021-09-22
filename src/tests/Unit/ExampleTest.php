@@ -17,7 +17,7 @@ class ExampleTest extends TestCase
     /**
      * 概要
      *
-     * 説明でうすすす
+     * 説明でうすすすddd
      *
      * @return void
      */
