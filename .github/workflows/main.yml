@@ -13,7 +13,13 @@ jobs:
       image: phpdoc/phpdoc
     # if: github.event.pull_request.merged == true
     steps:
-      - uses: actions/checkout@v1
-      - run: git checkout develop
-      - run: git branch
-      - run: phpdoc run -d ./src/tests -t ./docs/tests
+      - name: Checkout
+        uses: actions/checkout@v1
+        with:
+          ref: develop
+      - name: Generate Documents
+        run: phpdoc run -d ./src/tests -t ./docs/tests
+      - name: Commit
+        run: |
+            git add .
+            git commit -m 'docs: テスト仕様書生成'
