@@ -22,6 +22,7 @@ jobs:
           ref: develop
       - name: Git Settings
         run: |
+          echo 'aaa'
           git remote set-url origin "https://github.com/${GITHUB_REPOSITORY}"
           git config --local user.email "${GITHUB_ACTOR}"
           git config --local user.name "${GITHUB_ACTOR}@users.noreply.github.com"
