@@ -1,10 +1,10 @@
 name: Generate Test Documents
 
-on:
-  pull_request:
-    branches:
-      - develop
-    types: [closed]
+on: [push]
+  # pull_request:
+  #   branches:
+  #     - develop
+  #   types: [closed]
 
 jobs:
   generate-test-documents:
@@ -15,6 +15,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - run: |
-          git branch
           git checkout develop
+          cat /etc/lsb-release
           docker run --rm -v $(pwd):/data phpdoc/phpdoc run -d /data/src/tests -t /data/docs/tests
