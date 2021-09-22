@@ -20,13 +20,12 @@ jobs:
         uses: actions/checkout@v1
         with:
           ref: develop
-      - name: Git Settings
+      - name: Settings
         run: |
-          echo 'aaa'
-          git remote set-url origin "https://github.com/${GITHUB_REPOSITORY}"
+          git remote set-url origin https://github-actions:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
           git config --local user.email "${GITHUB_ACTOR}"
           git config --local user.name "${GITHUB_ACTOR}@users.noreply.github.com"
-      - name: Generate Documents
+      - name: Generate
         run: phpdoc run -d ./src/tests -t ./docs/tests
       - name: Commit
         run: |
