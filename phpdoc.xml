@@ -13,10 +13,10 @@
     <version number="latest">
         <api>
             <source dsn="./src/tests" />
+            <ignore hidden="true" symlinks="true">
+                <path>features/**/*</path>
+            </ignore>
         </api>
-        <ignore hidden="true" symlinks="true">
-            <path>features/**/*</path>
-        </ignore>
     </version>
     <template name="default" />
 </phpdocumentor>

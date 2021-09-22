@@ -21,7 +21,7 @@ class ExampleTest extends TestCase
      *
      * @return void
      */
-    public function テストメソッド1a()
+    public function テストメソッド1desu()
     {
         $this->assertTrue(true);
     }
