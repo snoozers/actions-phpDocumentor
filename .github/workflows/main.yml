@@ -19,8 +19,8 @@ jobs:
           ref: develop
       - name: Git Settings
         run: |
-          git config --local user.email test@example.com
-          git config --local user.name test_user
+          git config --local user.email "test@example.com"
+          git config --local user.name "test_user"
       - name: Generate Documents
         run: phpdoc run -d ./src/tests -t ./docs/tests
       - name: Commit
