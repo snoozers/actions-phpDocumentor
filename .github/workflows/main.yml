@@ -16,5 +16,4 @@ jobs:
       - uses: actions/checkout@v1
       - run: git checkout develop
       - run: git branch
-      - run: phpdoc
-      - run: docker run --rm -v $(pwd):/data phpdoc/phpdoc run -d /data/src/tests -t /data/docs/tests
+      - run: phpdoc run -d ./src/tests -t ./docs/tests
